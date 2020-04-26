@@ -29,6 +29,11 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <h3>nav</h3>
+    <ul>
+      <li><a href="/about" rel="noopener">About</a></li>
+      <li><a href="search" rel="noopener">Search</a></li>
+    </ul>
   </div>
 </template>
 
