@@ -19,9 +19,9 @@ Vue.use(VueRouter)
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   },
   {
-    path: '/search',
-    name: 'Search',
-    component: () => import('../views/Search.vue')
+    path: '/map',
+    name: 'map',
+    component: () => import('../views/Map.vue')
   }
 ]
 
