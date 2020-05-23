@@ -1,31 +1,32 @@
 <template>
-  <div id="app" class="container">
-        <div class="row">
-          <div class="col-md-9">
-            <!-- The map goes here -->
-            <div id="map" class="map">
+  <div class="app">
+    <v-container>
+        <v-row class="text-center">
+            <v-col cols="8">
+                <!-- The map goes here -->
+                <div id="map" class="map"></div>
 
-            </div>
-          </div>
-          <div class="col-md-3">
-            <!-- The layer checkboxes go here -->
-            <div
-                class="form-check"
-                v-for="layer in layers"
-                :key="layer.id">
-                <!-- label and input elements go here -->
-                <label class="form-check-label">
-                    <input
-                      class="form-check-input"
-                      type="checkbox"
-                      v-model="layer.active"
-                      @change="layerChanged(layer.id, layer.active)"
-                    />
-                    {{ layer.name }}
-                  </label>
-            </div>
-          </div>
-        </div>
+            </v-col>
+            <v-col cols="3">
+                <!-- The layer checkboxes go here -->
+                <div
+                    class="form-check"
+                    v-for="layer in layers"
+                    :key="layer.id">
+                    <!-- label and input elements go here -->
+                    <label class="form-check-label">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        v-model="layer.active"
+                        @change="layerChanged(layer.id, layer.active)"
+                        />
+                        {{ layer.name }}
+                    </label>
+                </div>
+            </v-col>
+        </v-row>
+    </v-container>
     </div>
 </template>
 
@@ -263,7 +264,7 @@ export default {
     },
     methods: { /* Any app-specific functions go here */ 
         initMap () {
-            this.map = L.map('map').setView([38.63, -90.23], 12);
+            this.map = L.map('map').setView([49.003397, 2.475173], 15);
             this.tileLayer = L.tileLayer(
             'https://cartodb-basemaps-{s}.global.ssl.fastly.net/rastertiles/voyager/{z}/{x}/{y}.png',
             {
@@ -313,7 +314,8 @@ export default {
 
 <style>
 .map { 
-    height: 600px; 
+    height: 200px;
+    width: 200px; 
 }
 
 .my-div-icon {
